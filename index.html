@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QRForge — Free QR Code Generator | Create, Customize & Download</title>
+  <meta name="description" content="Create free QR codes instantly. Generate QR codes for URLs, WiFi, vCards, emails and more. No signup required. Download PNG & SVG free." />
+  <meta name="keywords" content="QR code generator, free QR code, QR code maker, custom QR code, WiFi QR code, vCard QR code" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="QRForge — Free QR Code Generator" />
+  <meta property="og:description" content="Create free QR codes instantly. No signup required." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TOP AD BAR                            -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="ad-top-bar">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-slot ad-leaderboard">
+      <!-- AdSense Code Here -->
+      <div class="ad-placeholder">📢 728×90 — Ad Space</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- NAVBAR                                -->
+  <!-- ═══════════════════════════════════════ -->
+  <header>
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+              <rect x="14" y="14" width="3" height="3"/>
+              <rect x="18" y="14" width="3" height="3"/>
+              <rect x="14" y="18" width="3" height="3"/>
+              <rect x="18" y="18" width="3" height="3"/>
+            </svg>
+          </div>
+          <span class="nav-logo-text">QRForge</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#generator" class="nav-link">Generator</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="#generator" class="mobile-nav-link">Generator</a>
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO SECTION                          -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="orb orb-hero-l"></div>
+    <div class="orb orb-hero-r"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text reveal">
+        <div class="hero-pill">
+          <span class="pill-dot"></span>
+          <span>100% Free — No Signup — No Watermark</span>
+        </div>
+        <h1 class="hero-headline">
+          Free QR Code<br>
+          <span class="gradient-text">Generator Tool</span><br>
+          — Use Forever
+        </h1>
+        <p class="hero-sub">
+          Generate QR codes for URLs, WiFi passwords, emails, phone numbers, vCards and plain text.
+          Download in PNG or SVG format. Completely free, forever.
+        </p>
+        <a href="#generator" class="btn btn-primary btn-lg hero-cta">
+          <span>Generate Free QR Code ↓</span>
+        </a>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">2.4M+</span>
+            <span class="stat-lbl">QR Codes Created</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">6</span>
+            <span class="stat-lbl">Content Types</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-lbl">Free Always</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="hc-dots">
+              <span style="background:#FF5F57"></span>
+              <span style="background:#FFBD2E"></span>
+              <span style="background:#28C840"></span>
+            </div>
+            <span class="hc-badge">Live Preview</span>
+          </div>
+          <div class="hero-qr-wrap" id="hero-qr-wrap">
+            <div class="hero-qr-placeholder">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="1.5">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+                <rect x="14" y="14" width="3" height="3"/>
+                <rect x="18" y="14" width="3" height="3"/>
+                <rect x="14" y="18" width="3" height="3"/>
+                <rect x="18" y="18" width="3" height="3"/>
+              </svg>
+              <p>Your QR appears here</p>
+            </div>
+          </div>
+          <div class="hero-card-footer">
+            <span class="hcf-free">✓ Free</span>
+            <span class="hcf-free">✓ No Watermark</span>
+            <span class="hcf-free">✓ Instant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- AD SLOT                               -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="ad-section">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-slot ad-banner">
+      <div class="ad-placeholder">📢 Responsive Ad Unit</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- QR GENERATOR TOOL                     -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="generator">
+    <div class="gen-bg"></div>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <div class="section-badge">⚡ Free QR Generator</div>
+        <h2 class="section-title">
+          Create Your QR Code <span class="gradient-text">Right Now</span>
+        </h2>
+        <p class="section-sub">
+          No account needed. No limits. Download instantly in PNG or SVG.
+        </p>
+      </div>
+
+      <div class="generator-layout">
+
+        <!-- LEFT CONTROLS -->
+        <div class="gen-left reveal">
+
+          <!-- Step 1: Type -->
+          <div class="gen-block">
+            <div class="gen-step-label">Step 1 — Choose Content Type</div>
+            <div class="type-tabs" id="type-tabs">
+              <button class="type-tab active" data-type="url">🌐 URL</button>
+              <button class="type-tab" data-type="text">📝 Text</button>
+              <button class="type-tab" data-type="email">📧 Email</button>
+              <button class="type-tab" data-type="phone">📞 Phone</button>
+              <button class="type-tab" data-type="wifi">📶 WiFi</button>
+              <button class="type-tab" data-type="vcard">👤 vCard</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Input -->
+          <div class="gen-block">
+            <div class="gen-step-label">Step 2 — Enter Your Data</div>
+
+            <!-- URL -->
+            <div class="input-group" id="input-url">
+              <label class="input-label">Website URL</label>
+              <input type="url" class="gen-input" id="qr-url" placeholder="https://yourwebsite.com" />
+              <span class="input-hint">Include https:// for best results</span>
+            </div>
+
+            <!-- Text -->
+            <div class="input-group hidden" id="input-text">
+              <label class="input-label">Text / Message</label>
+              <textarea class="gen-input gen-textarea" id="qr-text" placeholder="Enter any text message here..."></textarea>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group hidden" id="input-email">
+              <label class="input-label">Email Address</label>
+              <input type="email" class="gen-input" id="qr-email" placeholder="contact@example.com" />
+              <label class="input-label mt12">Subject (optional)</label>
+              <input type="text" class="gen-input" id="qr-email-sub" placeholder="Hello there!" />
+              <label class="input-label mt12">Body (optional)</label>
+              <textarea class="gen-input gen-textarea" id="qr-email-body" placeholder="Email body text..."></textarea>
+            </div>
+
+            <!-- Phone -->
+            <div class="input-group hidden" id="input-phone">
+              <label class="input-label">Phone Number</label>
+              <input type="tel" class="gen-input" id="qr-phone" placeholder="+1 234 567 8900" />
+            </div>
+
+            <!-- WiFi -->
+            <div class="input-group hidden" id="input-wifi">
+              <label class="input-label">Network Name (SSID)</label>
+              <input type="text" class="gen-input" id="qr-wifi-ssid" placeholder="MyWiFiNetwork" />
+              <label class="input-label mt12">Password</label>
+              <input type="text" class="gen-input" id="qr-wifi-pass" placeholder="WiFi Password" />
+              <label class="input-label mt12">Security Type</label>
+              <select class="gen-input gen-select" id="qr-wifi-sec">
+                <option value="WPA">WPA / WPA2</option>
+                <option value="WEP">WEP</option>
+                <option value="">None (Open Network)</option>
+              </select>
+            </div>
+
+            <!-- vCard -->
+            <div class="input-group hidden" id="input-vcard">
+              <label class="input-label">Full Name *</label>
+              <input type="text" class="gen-input" id="qr-vcard-name" placeholder="John Doe" />
+              <label class="input-label mt12">Phone</label>
+              <input type="tel" class="gen-input" id="qr-vcard-phone" placeholder="+1 234 567 8900" />
+              <label class="input-label mt12">Email</label>
+              <input type="email" class="gen-input" id="qr-vcard-email" placeholder="john@example.com" />
+              <label class="input-label mt12">Company</label>
+              <input type="text" class="gen-input" id="qr-vcard-org" placeholder="Company Name" />
+              <label class="input-label mt12">Website</label>
+              <input type="url" class="gen-input" id="qr-vcard-web" placeholder="https://johndoe.com" />
+              <label class="input-label mt12">Address</label>
+              <input type="text" class="gen-input" id="qr-vcard-addr" placeholder="123 Main St, City, Country" />
+            </div>
+          </div>
+
+          <!-- Step 3: Customize -->
+          <div class="gen-block">
+            <div class="gen-step-label">Step 3 — Customize</div>
+            <div class="color-row">
+              <div class="color-item">
+                <label class="input-label">QR Color</label>
+                <div class="color-wrap">
+                  <input type="color" class="color-picker" id="qr-dark" value="#A855F7" />
+                  <span id="qr-dark-val">#A855F7</span>
+                </div>
+              </div>
+              <div class="color-item">
+                <label class="input-label">Background</label>
+                <div class="color-wrap">
+                  <input type="color" class="color-picker" id="qr-light" value="#ffffff" />
+                  <span id="qr-light-val">#FFFFFF</span>
+                </div>
+              </div>
+            </div>
+
+            <label class="input-label mt12">Error Correction Level</label>
+            <select class="gen-input gen-select" id="qr-ecl">
+              <option value="L">Low (L) — Smallest size</option>
+              <option value="M" selected>Medium (M) — Recommended</option>
+              <option value="H">High (H) — Best for logos</option>
+            </select>
+          </div>
+
+          <!-- Step 4: Size -->
+          <div class="gen-block">
+            <div class="gen-step-label">Step 4 — Output Size</div>
+            <div class="size-tabs" id="size-tabs">
+              <button class="size-tab" data-size="128">128px<span>Social</span></button>
+              <button class="size-tab active" data-size="256">256px<span>Standard</span></button>
+              <button class="size-tab" data-size="512">512px<span>Print</span></button>
+              <button class="size-tab" data-size="1024">1024px<span>HD</span></button>
+            </div>
+          </div>
+
+          <!-- Generate Button -->
+          <button class="btn btn-primary btn-generate" id="gen-btn">
+            <span id="gen-btn-text">⚡ Generate QR Code</span>
+          </button>
+          <p class="gen-free-note">✓ Free &nbsp;·&nbsp; ✓ No Watermark &nbsp;·&nbsp; ✓ No Signup &nbsp;·&nbsp; ✓ Instant Download</p>
+        </div>
+
+        <!-- AD COLUMN -->
+        <div class="gen-ad-col">
+          <div class="ad-label">Ad</div>
+          <div class="ad-slot ad-rect">
+            <div class="ad-placeholder">📢 300×600</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: PREVIEW -->
+        <div class="gen-right reveal">
+          <div class="preview-box">
+            <div class="preview-title">QR Code Preview</div>
+
+            <div class="qr-output-wrap" id="qr-output-wrap">
+              <div id="qr-output"></div>
+              <div id="qr-empty-state" class="qr-empty">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(168,85,247,0.35)" stroke-width="1.5">
+                  <rect x="3" y="3" width="7" height="7"/>
+                  <rect x="14" y="3" width="7" height="7"/>
+                  <rect x="3" y="14" width="7" height="7"/>
+                  <rect x="14" y="14" width="3" height="3"/>
+                  <rect x="18" y="14" width="3" height="3"/>
+                  <rect x="14" y="18" width="3" height="3"/>
+                  <rect x="18" y="18" width="3" height="3"/>
+                </svg>
+                <p>Fill the form and click<br><strong>Generate QR Code</strong></p>
+              </div>
+            </div>
+
+            <!-- Download Buttons -->
+            <div id="download-area" class="download-area" style="display:none;">
+              <div class="qr-data-preview" id="qr-data-preview"></div>
+              <div class="dl-btns">
+                <button class="btn btn-primary" id="dl-png">
+                  <span>⬇ Download PNG</span>
+                </button>
+                <button class="btn btn-outline" id="dl-svg">
+                  <span>⬇ Download SVG</span>
+                </button>
+              </div>
+              <button class="btn-copy" id="btn-copy">📋 Copy QR Data to Clipboard</button>
+              <button class="btn-reset" id="btn-reset">🔄 Reset & Create New</button>
+            </div>
+
+            <!-- Free features list -->
+            <div class="free-features-box">
+              <div class="ffb-title">✅ Everything is Free</div>
+              <ul class="ffb-list">
+                <li>🌐 URL / Website QR Codes</li>
+                <li>📶 WiFi Password QR Codes</li>
+                <li>👤 vCard / Contact QR Codes</li>
+                <li>📧 Email & Phone QR Codes</li>
+                <li>📝 Plain Text QR Codes</li>
+                <li>🎨 Custom Colors</li>
+                <li>📐 4 Size Options (up to 1024px)</li>
+                <li>💾 PNG & SVG Download</li>
+                <li>♾️ Unlimited Usage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- AD SLOT                               -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="ad-section">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-slot ad-banner">
+      <div class="ad-placeholder">📢 Responsive Ad Unit</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FEATURES SECTION                      -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="features">
+    <div class="orb orb-feat-r"></div>
+    <div class="orb orb-feat-l"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">⚡ Why QRForge</div>
+        <h2 class="section-title">
+          Powerful Features,<span class="gradient-text"> Always Free</span>
+        </h2>
+        <p class="section-sub">
+          No hidden costs, no premium tiers. Everything you need to create perfect QR codes.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card reveal">
+          <div class="feat-icon icon-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">6 Content Types</h3>
+          <p class="feat-desc">Generate QR codes for URLs, plain text, emails, phone numbers, WiFi credentials, and vCard contacts — all free.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feat-icon icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Custom Colors</h3>
+          <p class="feat-desc">Pick any color for your QR code and background using our color picker. Make your QR match your brand perfectly.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feat-icon icon-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">PNG & SVG Download</h3>
+          <p class="feat-desc">Download your QR code as PNG for digital use or SVG for print — scales to any size without losing quality.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feat-icon icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">Up to 1024px HD</h3>
+          <p class="feat-desc">Choose from 128px to 1024px output size. High-resolution QR codes perfect for print, packaging, and posters.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feat-icon icon-purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">No Watermark</h3>
+          <p class="feat-desc">Your QR code is yours — completely clean with no watermarks, logos, or branding added by us. Ever.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feat-icon icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3 class="feat-title">No Signup Required</h3>
+          <p class="feat-desc">Open the tool and start generating immediately. No account, no email, no credit card. Just create and download.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HOW IT WORKS                          -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="how-it-works">
+    <div class="hiw-bg"></div>
+    <div class="orb orb-hiw"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="section-header reveal">
+        <div class="section-badge section-badge-cyan">🚀 How It Works</div>
+        <h2 class="section-title">
+          Create Your QR Code in <span class="gradient-text">4 Simple Steps</span>
+        </h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Choose Type</h3>
+            <p class="step-desc">Select what your QR code will contain — a URL, WiFi password, contact card, email, phone, or plain text.</p>
+          </div>
+        </div>
+
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"/>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Enter Data</h3>
+            <p class="step-desc">Fill in your URL, message, contact details or WiFi info into the input fields provided.</p>
+          </div>
+        </div>
+
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="13.5" cy="6.5" r="0.5" fill="#A855F7"/>
+                <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Customize Colors</h3>
+            <p class="step-desc">Pick your preferred QR color and background color to match your brand or personal style.</p>
+          </div>
+        </div>
+
+        <div class="step-card reveal">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-icon step-icon-cyan">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </div>
+            <h3 class="step-title">Generate & Download</h3>
+            <p class="step-desc">Click Generate, preview your QR code instantly, then download as PNG or SVG — ready to use anywhere.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="steps-cta reveal">
+        <a href="#generator" class="btn btn-primary btn-lg">
+          <span>Try It Now — 100% Free →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- AD SLOT                               -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="ad-section">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-slot ad-banner">
+      <div class="ad-placeholder">📢 Responsive Ad Unit</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FAQ                                   -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">❓ FAQ</div>
+        <h2 class="section-title">
+          Frequently Asked <span class="gradient-text">Questions</span>
+        </h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">Is QRForge really free forever? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">Yes — 100% free, forever. No hidden plans, no premium tiers, no credit card needed. Generate unlimited QR codes at no cost.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">Do generated QR codes expire? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">Never. Static QR codes generated with QRForge are permanent. They are encoded directly into the image and will work forever as long as the content they point to remains valid.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">Can I use QR codes for commercial purposes? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">Absolutely. All QR codes you create are yours — use them on product packaging, business cards, restaurant menus, advertisements, print materials, and more.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">What is the difference between PNG and SVG? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">PNG is a raster image — great for digital screens, websites, and social media. SVG is a vector format — it scales infinitely without pixelation, making it ideal for print, signage, and large format materials.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">What is Error Correction Level? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">Error Correction allows QR codes to be scanned even if partially damaged or obscured. Low (L) = 7% recovery, Medium (M) = 15% recovery, High (H) = 30% recovery. Use High if you plan to add a logo over the QR code.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">How do I create a WiFi QR code? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">Select the "WiFi" tab, enter your network name (SSID), password, and security type (WPA is most common). Generate and download. Anyone who scans it will be connected to your WiFi automatically on most modern smartphones.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">Is my data stored on your servers? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">No. QRForge generates QR codes entirely in your browser using JavaScript. Your data never leaves your device and is never sent to or stored on any server. Complete privacy guaranteed.</div>
+        </div>
+        <div class="faq-item reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">What size should I choose for print? <span class="faq-arr">▼</span></div>
+          <div class="faq-a">For digital use (web, social media), 256px is sufficient. For print materials (flyers, posters, packaging), choose 512px or 1024px. For large format print (banners, billboards), use SVG format as it scales infinitely.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER AD                             -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="ad-section">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-slot ad-banner">
+      <div class="ad-placeholder">📢 Footer Ad — 728×90</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER                                -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo-link">
+            <div class="nav-logo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+                <rect x="14" y="14" width="3" height="3"/>
+                <rect x="18" y="14" width="3" height="3"/>
+                <rect x="14" y="18" width="3" height="3"/>
+                <rect x="18" y="18" width="3" height="3"/>
+              </svg>
+            </div>
+            <span class="nav-logo-text">QRForge</span>
+          </a>
+          <p class="footer-tagline">Free QR code generator. No signup, no watermark, no limits. Create beautiful QR codes instantly.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Tools</h3>
+          <ul class="footer-links">
+            <li><a href="#generator" class="footer-link">URL QR Code</a></li>
+            <li><a href="#generator" class="footer-link">WiFi QR Code</a></li>
+            <li><a href="#generator" class="footer-link">vCard QR Code</a></li>
+            <li><a href="#generator" class="footer-link">Email QR Code</a></li>
+            <li><a href="#generator" class="footer-link">Phone QR Code</a></li>
+            <li><a href="#generator" class="footer-link">Text QR Code</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="#faq" class="footer-link">FAQ</a></li>
+            <li><a href="#features" class="footer-link">Features</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-col-title">Legal</h3>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="privacy.html#terms" class="footer-link">Terms of Service</a></li>
+            <li><a href="privacy.html#cookies" class="footer-link">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <hr class="footer-hr" />
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 QRForge. All rights reserved. Free QR Code Generator.</p>
+        <div class="social-row">
+          <a href="#" class="social-ic" aria-label="Twitter">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-ic" aria-label="GitHub">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
